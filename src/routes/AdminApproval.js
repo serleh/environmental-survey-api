@@ -7,7 +7,7 @@ import {
 
 import { requireAdmin } from "../middlewares/requireAdmin.js";
 import { authenticate } from "../middlewares/auth.js";
-import { getPendingUsersController } from "../controllers/auth.js";
+import { getPendingUsersController } from "../controllers/adminApproval.js";
 
 const router = express.Router();
 

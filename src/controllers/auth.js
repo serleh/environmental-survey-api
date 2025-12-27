@@ -1,4 +1,3 @@
-import { getPendingUsers } from "../services/adminApproval.js";
 import { registerUser, userLogin } from "../services/auth.js";
 
 export const register = async (req, res) => {
@@ -28,16 +27,5 @@ export const loginController = async (req, res) => {
     });
   } catch (error) {
     res.status(401).json({ message: error.message });
-  }
-};
-
-// Get pending users
-export const getPendingUsersController = async (req, res) => {
-  try {
-    const users = await getPendingUsers();
-
-    res.status(200).json({ count: users.length, users });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
   }
 };
